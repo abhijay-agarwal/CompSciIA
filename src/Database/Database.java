@@ -3,22 +3,27 @@ package Database;
 import Model.Stock;
 
 import java.io.*;
-import java.lang.reflect.Array;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
-import java.util.ArrayList;
 
 public class Database {
 
-    private static final String namePath = "/Users/agarw9646/IdeaProjects/Comp Sci IA/src/Database/names";
-    private static final String emailPath = "/Users/agarw9646/IdeaProjects/Comp Sci IA/src/Database/emails";
-    private static final String passPath = "/Users/agarw9646/IdeaProjects/Comp Sci IA/src/Database/passwords";
-    private static final String stockPath = "/Users/agarw9646/IdeaProjects/Comp Sci IA/src/Database/stocks";
-    private static final String cashPath = "/Users/agarw9646/IdeaProjects/Comp Sci IA/src/Database/cash";
+//    private static final String namePath = "/Users/agarw9646/IdeaProjects/Comp Sci IA/src/Database/names";
+//    private static final String emailPath = "/Users/agarw9646/IdeaProjects/Comp Sci IA/src/Database/emails";
+//    private static final String passPath = "/Users/agarw9646/IdeaProjects/Comp Sci IA/src/Database/passwords";
+//    private static final String stockPath = "/Users/agarw9646/IdeaProjects/Comp Sci IA/src/Database/stocks";
+//    private static final String cashPath = "/Users/agarw9646/IdeaProjects/Comp Sci IA/src/Database/cash";
+
+    private static final String namePath = "/Users/Krish/IdeaProjects/CompSciIA/src/Database/names";
+    private static final String emailPath = "/Users/Krish/IdeaProjects/CompSciIA/src/Database/emails";
+    private static final String passPath = "/Users/Krish/IdeaProjects/CompSciIA/src/Database/passwords";
+    private static final String stockPath = "/Users/Krish/IdeaProjects/CompSciIA/src/Database/stocks";
+    private static final String cashPath = "/Users/Krish/IdeaProjects/CompSciIA/src/Database/cash";
 
     private static ArrayList<String> names = new ArrayList<>();
     private static ArrayList<String> emails = new ArrayList<>();
@@ -126,16 +131,6 @@ public class Database {
         }
         Path file = Paths.get(path);
         Files.write(file, newLines, StandardCharsets.UTF_8);
-    }
-
-    public static void main(String[] args) throws IOException {
-        String path = "/Users/agarw9646/IdeaProjects/Comp Sci IA/src/Database/test";
-        changeLine(path, "200", 2);
-
-        int[] array = {0, 0, 0, 0, 0, 0};
-        System.out.println(Arrays.toString(array));
-        String test = Arrays.toString(array).replaceAll("[\\[\\],]", "");
-        System.out.println(test);
     }
 
 }

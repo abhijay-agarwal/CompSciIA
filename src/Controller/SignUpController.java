@@ -1,22 +1,17 @@
 package Controller;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.ResourceBundle;
-
 import Database.Database;
-import Model.AlertBox;
+import Animation.AlertBox;
 import Model.SceneController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.text.Text;
 
-import javax.xml.crypto.Data;
+import java.io.IOException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.ResourceBundle;
 
 public class SignUpController {
 

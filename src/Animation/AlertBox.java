@@ -1,4 +1,4 @@
-package Model;
+package Animation;
 
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
