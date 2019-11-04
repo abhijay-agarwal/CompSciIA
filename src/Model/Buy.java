@@ -38,4 +38,5 @@ public class Buy {
             return ("Buy " + quantity + " units at $" + price);
         }
     }
+
 }

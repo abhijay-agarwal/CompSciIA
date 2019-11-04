@@ -1,15 +1,15 @@
 package Controller;
 
-import java.io.FileNotFoundException;
-import java.net.URL;
-import java.util.ResourceBundle;
-
 import Database.Database;
 import Model.SceneController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
+
+import java.io.FileNotFoundException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 public class HomeController {
 

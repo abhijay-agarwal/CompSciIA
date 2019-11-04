@@ -1,11 +1,13 @@
 package Controller;
 
-import java.net.URL;
-import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
+
+import java.net.URL;
+import java.util.ResourceBundle;
 
 public class TradeController {
 
@@ -19,16 +21,18 @@ public class TradeController {
     private AnchorPane anchorPane;
 
     @FXML
-    private Text hello;
+    private ComboBox<String> stock;
 
     @FXML
-    private ComboBox<String> stock;
+    private TextField quantity;
+
+    @FXML
+    private TextField price;
 
     @FXML
     void initialize() {
         stock.getItems().removeAll(stock.getItems());
-        stock.getItems().addAll( "AAPL | Apple Inc.", "AMZN | Amazon.com Inc.", "FB | Facebook Inc.", "NFLX | Netflix Inc.", "TSLA | Tesla Inc.", "GOOG | Alphabet Inc.");
-        stock.setStyle("-fx-font: 20px \"DIN Alternate\";");
-        stock.setStyle("-");
+        stock.getItems().addAll("AAPL | Apple Inc.", "AMZN | Amazon.com Inc.", "FB | Facebook Inc.", "NFLX | Netflix Inc.", "TSLA | Tesla Inc.", "GOOG | Alphabet Inc.");
     }
+
 }

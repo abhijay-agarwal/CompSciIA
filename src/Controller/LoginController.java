@@ -1,25 +1,19 @@
 package Controller;
 
+import Animation.Shaker;
+import Database.Database;
+import Animation.AlertBox;
+import Model.SceneController;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+
 import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
-
-import Animation.Shaker;
-import Database.Database;
-import Model.AlertBox;
-import Model.SceneController;
-
-import javafx.fxml.FXML;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.paint.Paint;
-import javafx.scene.text.Text;
 
 public class LoginController {
 
