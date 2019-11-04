@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.HomeController">
+   <children>
+      <BorderPane layoutX="30.0" layoutY="20.0" prefHeight="360.0" prefWidth="540.0" style="-fx-border-color: #5bc793; -fx-border-width: 3;" />
+      <Text fx:id="hello" layoutX="80.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello ">
+         <font>
+            <Font name="DIN Alternate Bold" size="40.0" />
+         </font>
+      </Text>
+      <Button fx:id="portfolioButton" contentDisplay="TOP" layoutX="50.0" layoutY="140.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #5BC793; -fx-border-width: 2; -fx-border-radius: 10;" text="Portfolio">
+         <graphic>
+            <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+         </graphic>
+         <font>
+            <Font name="DIN Alternate Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="tradeButton" contentDisplay="TOP" layoutX="225.0" layoutY="140.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #5BC793; -fx-border-width: 2; -fx-border-radius: 10;" text="Trade">
+         <graphic>
+            <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+         </graphic>
+         <font>
+            <Font name="DIN Alternate Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="dataButton" contentDisplay="TOP" layoutX="400.0" layoutY="140.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #5BC793; -fx-border-width: 2; -fx-border-radius: 10;" text="Data">
+         <graphic>
+            <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+         </graphic>
+         <font>
+            <Font name="DIN Alternate Bold" size="20.0" />
+         </font>
+      </Button>
+      <Text layoutX="80.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Access your portfolio, trade, or log out">
+         <font>
+            <Font name="DIN Alternate Bold" size="20.0" />
+         </font>
+      </Text>
+      <Button fx:id="logoutButton" layoutX="225.0" layoutY="310.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #5BC793;" text="Log Out" textFill="WHITE">
+         <font>
+            <Font name="DIN Alternate Bold" size="22.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
