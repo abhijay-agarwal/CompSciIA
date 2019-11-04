@@ -1,0 +1,10 @@
+/**
+ * Stylesheet created by Abhi
+ */
+
+.combo-box .list-cell {
+    -fx-font-size: 20px;
+    -fx-font-family: "DIN Alternate";
+    -fx-font-weight: bold;
+    -fx-background-color: #ffffff;
+}
