@@ -109,7 +109,7 @@ public class Database {
     public static void fillInfo() throws IOException {
         BufferedWriter writer = new BufferedWriter(new FileWriter(stockPath, true));
         BufferedWriter writer2 = new BufferedWriter(new FileWriter(cashPath, true));
-        writer.append("\n").append("0, 0, 0, 0, 0, 0");
+        writer.append("\n").append("0 0 0 0 0 0");
         writer2.append("\n").append("0");
         writer.close();
         writer2.close();
@@ -133,4 +133,7 @@ public class Database {
         Files.write(file, newLines, StandardCharsets.UTF_8);
     }
 
+    public static String getStockPath() {
+        return stockPath;
+    }
 }

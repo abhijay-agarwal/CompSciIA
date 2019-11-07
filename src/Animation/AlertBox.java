@@ -1,12 +1,7 @@
 package Animation;
 
-import javafx.geometry.Pos;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.layout.VBox;
-import javafx.stage.Modality;
-import javafx.stage.Stage;
+import javafx.scene.control.Alert;
+import javafx.scene.control.DialogPane;
 
 /**
  * Class created by Abhi
@@ -14,26 +9,23 @@ import javafx.stage.Stage;
 
 public class AlertBox {
 
-    public static void display(String title, String message) {
-        Stage window = new Stage();
+    public AlertBox(String title, String message) {
+        display(title, message);
+    }
 
-        window.initModality(Modality.APPLICATION_MODAL);
-        window.setTitle(title);
-        window.setMinWidth(250);
-
-        Label label = new Label();
-        label.setText(message);
-
-        Button closeButton = new Button("Close the window");
-        closeButton.setOnAction(event -> window.close());
-
-        VBox layout = new VBox(10);
-        layout.getChildren().addAll(label, closeButton);
-        layout.setAlignment(Pos.CENTER);
-
-        Scene scene = new Scene(layout);
-        window.setScene(scene);
-        window.showAndWait();
+    private void display(String title, String message) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle(title);
+        alert.setHeaderText("Something went wrong");
+        alert.setContentText(message);
+        DialogPane dialogPane = alert.getDialogPane();
+        try {
+            dialogPane.getStylesheets().add(getClass().getResource("/Extra/AlertBox.css").toExternalForm());
+            dialogPane.getStyleClass().add("dialog");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        alert.showAndWait();
     }
 
 }

@@ -1,8 +1,8 @@
 package Controller;
 
+import Animation.AlertBox;
 import Animation.Shaker;
 import Database.Database;
-import Animation.AlertBox;
 import Model.SceneController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -41,14 +41,13 @@ public class LoginController {
     @FXML
     private Button createButton;
 
-    public static int getIndex() {
+    static int getIndex() {
         return index;
     }
 
-    public static void setIndex(int index) {
+    static void setIndex(int index) {
         LoginController.index = index;
     }
-
 
     @FXML
     void initialize() {
@@ -79,7 +78,7 @@ public class LoginController {
                     index++;
                 }
                 if (!found) {
-                    AlertBox.display("Error", "email doesn't exist");
+                    new AlertBox("Error", "Could not find your account");
                     Shaker shaker = new Shaker(email);
                     shaker.shake();
                     email.setText("");
@@ -90,6 +89,7 @@ public class LoginController {
                     if (password.getText().equals(passwords.get(index))) {
                         new SceneController(anchorPane).activate("Home");
                     } else {
+                        new AlertBox("Error", "The email and password  do not match");
                         Shaker shaker = new Shaker(password);
                         shaker.shake();
                         password.setText("");
@@ -102,7 +102,6 @@ public class LoginController {
         });
 
         createButton.setOnAction(event -> new SceneController(anchorPane).activate("SignUp"));
-
     }
 
 }
