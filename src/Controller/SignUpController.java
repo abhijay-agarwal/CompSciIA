@@ -67,7 +67,7 @@ public class SignUpController {
                 ArrayList<String> emails = Database.getEmails();
                 for (String string : emails) {
                     if (email.getText().equals(string)) {
-                        AlertBox.display("Error", "This email already exists");
+                        new AlertBox("Error", "This email already exists");
                         clearFields();
                         found = true;
                         break;
@@ -75,12 +75,13 @@ public class SignUpController {
                 }
                 if (!found) {
                     if (!email.getText().matches(email_regex)) {
-                        AlertBox.display("Email Error", "Your email must ...");
+                        new AlertBox("Email Error", "Your email must ...");
                         clearFields();
                     }
                     if (!password.getText().matches(pass_regex)) {
-                        AlertBox.display("Password Error", "Your password must contain at least one letter and one number");
-                        clearFields();
+                        new AlertBox("Password Error", "Your password must be at least 5 characters long and must contain at least one letter and one number");
+                        password.setText("");
+                        password.positionCaret(0);
                     }
                     if (email.getText().matches(email_regex) && password.getText().matches(pass_regex)) {
                         Database.addName(firstName.getText() + " " + lastName.getText());

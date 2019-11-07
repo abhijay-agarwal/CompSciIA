@@ -1,0 +1,13 @@
+.dialog {
+    -fx-background-color: #ffffff;
+}
+
+.dialog > *.button-bar > *.container {
+    -fx-background-color: #ffffff;
+}
+
+.dialog > *.label.content {
+    -fx-font-family: "DIN Alternate";
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}

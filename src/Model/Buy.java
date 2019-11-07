@@ -2,24 +2,22 @@ package Model;
 
 public class Buy {
 
-    private int quantity;
-    private int price;
+    private double quantity;
+    private double price;
 
-    public Buy(int price, int quantity) {
+    public Buy(double price, double quantity) {
         this.price = price;
         this.quantity = quantity;
     }
 
-    public Buy(int quantity) {
+    public Buy(double quantity) {
         this.price = 999999999;
         this.quantity = quantity;
     }
 
-    public int getPrice() {
-        return price;
-    }
+    public double getPrice() { return price; }
 
-    public int getQuantity() {
+    public double getQuantity() {
         return quantity;
     }
 
@@ -31,6 +29,7 @@ public class Buy {
         this.quantity = quantity;
     }
 
+    @Override
     public String toString() {
         if (this.getPrice() == 999999999) {
             return ("Buy " + quantity + " units at market price");

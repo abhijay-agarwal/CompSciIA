@@ -13,17 +13,17 @@ import java.util.Scanner;
 
 public class Database {
 
-//    private static final String namePath = "/Users/agarw9646/IdeaProjects/Comp Sci IA/src/Database/names";
-//    private static final String emailPath = "/Users/agarw9646/IdeaProjects/Comp Sci IA/src/Database/emails";
-//    private static final String passPath = "/Users/agarw9646/IdeaProjects/Comp Sci IA/src/Database/passwords";
-//    private static final String stockPath = "/Users/agarw9646/IdeaProjects/Comp Sci IA/src/Database/stocks";
-//    private static final String cashPath = "/Users/agarw9646/IdeaProjects/Comp Sci IA/src/Database/cash";
+    private static final String namePath = "/Users/agarw9646/IdeaProjects/Comp Sci IA/src/Database/names";
+    private static final String emailPath = "/Users/agarw9646/IdeaProjects/Comp Sci IA/src/Database/emails";
+    private static final String passPath = "/Users/agarw9646/IdeaProjects/Comp Sci IA/src/Database/passwords";
+    private static final String stockPath = "/Users/agarw9646/IdeaProjects/Comp Sci IA/src/Database/stocks";
+    private static final String cashPath = "/Users/agarw9646/IdeaProjects/Comp Sci IA/src/Database/cash";
 
-    private static final String namePath = "/Users/Krish/IdeaProjects/CompSciIA/src/Database/names";
-    private static final String emailPath = "/Users/Krish/IdeaProjects/CompSciIA/src/Database/emails";
-    private static final String passPath = "/Users/Krish/IdeaProjects/CompSciIA/src/Database/passwords";
-    private static final String stockPath = "/Users/Krish/IdeaProjects/CompSciIA/src/Database/stocks";
-    private static final String cashPath = "/Users/Krish/IdeaProjects/CompSciIA/src/Database/cash";
+//    private static final String namePath = "/Users/Krish/IdeaProjects/CompSciIA/src/Database/names";
+//    private static final String emailPath = "/Users/Krish/IdeaProjects/CompSciIA/src/Database/emails";
+//    private static final String passPath = "/Users/Krish/IdeaProjects/CompSciIA/src/Database/passwords";
+//    private static final String stockPath = "/Users/Krish/IdeaProjects/CompSciIA/src/Database/stocks";
+//    private static final String cashPath = "/Users/Krish/IdeaProjects/CompSciIA/src/Database/cash";
 
     private static ArrayList<String> names = new ArrayList<>();
     private static ArrayList<String> emails = new ArrayList<>();
@@ -109,7 +109,7 @@ public class Database {
     public static void fillInfo() throws IOException {
         BufferedWriter writer = new BufferedWriter(new FileWriter(stockPath, true));
         BufferedWriter writer2 = new BufferedWriter(new FileWriter(cashPath, true));
-        writer.append("\n").append("0, 0, 0, 0, 0, 0");
+        writer.append("\n").append("0 0 0 0 0 0");
         writer2.append("\n").append("0");
         writer.close();
         writer2.close();

@@ -79,7 +79,7 @@ public class LoginController {
                     index++;
                 }
                 if (!found) {
-                    AlertBox.display("Error", "email doesn't exist");
+                    new AlertBox("Error", "Could not find your account");
                     Shaker shaker = new Shaker(email);
                     shaker.shake();
                     email.setText("");
@@ -90,6 +90,7 @@ public class LoginController {
                     if (password.getText().equals(passwords.get(index))) {
                         new SceneController(anchorPane).activate("Home");
                     } else {
+                        new AlertBox("Error", "The email and password  do not match");
                         Shaker shaker = new Shaker(password);
                         shaker.shake();
                         password.setText("");
