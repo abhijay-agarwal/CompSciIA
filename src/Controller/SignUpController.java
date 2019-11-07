@@ -1,7 +1,7 @@
 package Controller;
 
-import Database.Database;
 import Animation.AlertBox;
+import Database.Database;
 import Model.SceneController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

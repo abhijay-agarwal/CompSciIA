@@ -21,7 +21,9 @@ public class SceneController {
             put("Login", FXMLLoader.load(getClass().getResource(BASE_PATH + "Login.fxml")));
             put("SignUp", FXMLLoader.load(getClass().getResource(BASE_PATH + "SignUp.fxml")));
             put("Home", FXMLLoader.load(getClass().getResource(BASE_PATH + "Home.fxml")));
+//            put("Data", FXMLLoader.load(getClass().getResource(BASE_PATH + "Data.fxml")));
             put("Trade", FXMLLoader.load(getClass().getResource(BASE_PATH + "Trade.fxml")));
+            put("Portfolio", FXMLLoader.load(getClass().getResource(BASE_PATH + "Portfolio.fxml")));
         } catch (IOException e) {
             e.printStackTrace();
         }

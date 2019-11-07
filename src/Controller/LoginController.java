@@ -1,8 +1,8 @@
 package Controller;
 
+import Animation.AlertBox;
 import Animation.Shaker;
 import Database.Database;
-import Animation.AlertBox;
 import Model.SceneController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -41,14 +41,13 @@ public class LoginController {
     @FXML
     private Button createButton;
 
-    public static int getIndex() {
+    static int getIndex() {
         return index;
     }
 
-    public static void setIndex(int index) {
+    static void setIndex(int index) {
         LoginController.index = index;
     }
-
 
     @FXML
     void initialize() {
@@ -103,7 +102,6 @@ public class LoginController {
         });
 
         createButton.setOnAction(event -> new SceneController(anchorPane).activate("SignUp"));
-
     }
 
 }
