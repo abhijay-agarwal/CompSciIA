@@ -1,14 +1,7 @@
 package Animation;
 
-import javafx.geometry.Pos;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
 import javafx.scene.control.DialogPane;
-import javafx.scene.control.Label;
-import javafx.scene.layout.VBox;
-import javafx.stage.Modality;
-import javafx.stage.Stage;
 
 /**
  * Class created by Abhi
@@ -30,9 +23,8 @@ public class AlertBox {
             dialogPane.getStylesheets().add(getClass().getResource("/Extra/AlertBox.css").toExternalForm());
             dialogPane.getStyleClass().add("dialog");
         } catch (Exception e) {
-            System.out.println("lol this shit don't work");
+            e.printStackTrace();
         }
-
         alert.showAndWait();
     }
 

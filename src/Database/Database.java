@@ -13,17 +13,17 @@ import java.util.Scanner;
 
 public class Database {
 
-    private static final String namePath = "/Users/agarw9646/IdeaProjects/Comp Sci IA/src/Database/names";
-    private static final String emailPath = "/Users/agarw9646/IdeaProjects/Comp Sci IA/src/Database/emails";
-    private static final String passPath = "/Users/agarw9646/IdeaProjects/Comp Sci IA/src/Database/passwords";
-    private static final String stockPath = "/Users/agarw9646/IdeaProjects/Comp Sci IA/src/Database/stocks";
-    private static final String cashPath = "/Users/agarw9646/IdeaProjects/Comp Sci IA/src/Database/cash";
+//    private static final String namePath = "/Users/agarw9646/IdeaProjects/Comp Sci IA/src/Database/names";
+//    private static final String emailPath = "/Users/agarw9646/IdeaProjects/Comp Sci IA/src/Database/emails";
+//    private static final String passPath = "/Users/agarw9646/IdeaProjects/Comp Sci IA/src/Database/passwords";
+//    private static final String stockPath = "/Users/agarw9646/IdeaProjects/Comp Sci IA/src/Database/stocks";
+//    private static final String cashPath = "/Users/agarw9646/IdeaProjects/Comp Sci IA/src/Database/cash";
 
-//    private static final String namePath = "/Users/Krish/IdeaProjects/CompSciIA/src/Database/names";
-//    private static final String emailPath = "/Users/Krish/IdeaProjects/CompSciIA/src/Database/emails";
-//    private static final String passPath = "/Users/Krish/IdeaProjects/CompSciIA/src/Database/passwords";
-//    private static final String stockPath = "/Users/Krish/IdeaProjects/CompSciIA/src/Database/stocks";
-//    private static final String cashPath = "/Users/Krish/IdeaProjects/CompSciIA/src/Database/cash";
+    private static final String namePath = "/Users/Krish/IdeaProjects/CompSciIA/src/Database/names";
+    private static final String emailPath = "/Users/Krish/IdeaProjects/CompSciIA/src/Database/emails";
+    private static final String passPath = "/Users/Krish/IdeaProjects/CompSciIA/src/Database/passwords";
+    private static final String stockPath = "/Users/Krish/IdeaProjects/CompSciIA/src/Database/stocks";
+    private static final String cashPath = "/Users/Krish/IdeaProjects/CompSciIA/src/Database/cash";
 
     private static ArrayList<String> names = new ArrayList<>();
     private static ArrayList<String> emails = new ArrayList<>();
@@ -133,4 +133,7 @@ public class Database {
         Files.write(file, newLines, StandardCharsets.UTF_8);
     }
 
+    public static String getStockPath() {
+        return stockPath;
+    }
 }
