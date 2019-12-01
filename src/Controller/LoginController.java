@@ -89,7 +89,7 @@ public class LoginController {
                     if (password.getText().equals(passwords.get(index))) {
                         new SceneController(anchorPane).activate("Home");
                     } else {
-                        new AlertBox("Error", "The email and password  do not match");
+                        new AlertBox("Error", "The email and password do not match");
                         Shaker shaker = new Shaker(password);
                         shaker.shake();
                         password.setText("");
