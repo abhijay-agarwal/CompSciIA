@@ -48,5 +48,10 @@
             <Font name="DIN Alternate Bold" size="20.0" />
          </font>
       </Text>
+      <Button fx:id="back" layoutX="480.0" layoutY="30.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: #EBEBEB; -fx-background-radius: 4;" text="Back">
+         <font>
+            <Font name="DIN Alternate Bold" size="22.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

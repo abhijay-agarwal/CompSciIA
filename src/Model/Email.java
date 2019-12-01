@@ -3,19 +3,22 @@ package Model;
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Date;
 import java.util.Properties;
 
 /**
- * Class created by Krish
+ * Class created by Abhi
  */
 
 public class Email {
 
     private final String SSL_FACTORY = "javax.net.ssl.SSLSocketFactory";
 
-    private final String username = "";
-    private final String password = "";
+    private final String username = "agarw9646@gapps.uwcsea.edu.sg";
+    private String password = "010210Pranky!";
 
     public Email(String to, String subject, String body) {
         sendEmail(to, subject, body);
@@ -45,7 +48,7 @@ public class Email {
             Message msg = new MimeMessage(session);
 
             // -- Set the FROM and TO fields --
-            msg.setFrom(new InternetAddress("xxx@gmail.com"));
+            msg.setFrom(new InternetAddress("test@gmail.com"));
             msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to, false));
             msg.setSubject(subject);
             msg.setText(body);
