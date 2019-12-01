@@ -1,9 +1,12 @@
 package Controller;
 
 import Database.Database;
+import Model.SceneController;
 import Model.Stock;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 
 import java.io.FileNotFoundException;
@@ -17,6 +20,9 @@ public class PortfolioController {
 
     @FXML
     private URL location;
+
+    @FXML
+    private AnchorPane anchorPane;
 
     @FXML
     private TextField appleValue;
@@ -58,6 +64,9 @@ public class PortfolioController {
     private Text google;
 
     @FXML
+    private Button back;
+
+    @FXML
     void initialize() throws FileNotFoundException {
         int[] array = Database.getStocks(LoginController.getIndex());
 
@@ -74,5 +83,7 @@ public class PortfolioController {
         netflixValue.setText(Double.toString(array[Stock.NETFLIX.getIndex()] * (Stock.NETFLIX.getPrice())));
         teslaValue.setText(Double.toString(array[Stock.TESLA.getIndex()] * (Stock.TESLA.getPrice())));
         googleValue.setText(Double.toString(array[Stock.GOOGLE.getIndex()] * (Stock.GOOGLE.getPrice())));
+
+        back.setOnAction(event -> new SceneController(anchorPane).activate("Home"));
     }
 }
