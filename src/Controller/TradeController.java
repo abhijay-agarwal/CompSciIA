@@ -2,6 +2,7 @@ package Controller;
 
 import Database.Database;
 import Model.Buy;
+import Model.SceneController;
 import Model.Sell;
 import Model.Stock;
 import javafx.fxml.FXML;
@@ -61,6 +62,9 @@ public class TradeController {
     private Text current;
 
     @FXML
+    private Button back;
+
+    @FXML
     void initialize() {
         stock.getItems().removeAll(stock.getItems());
         stock.getItems().addAll("AAPL | Apple Inc.", "AMZN | Amazon.com, Inc.", "FB | Facebook, Inc.", "NFLX | Netflix, Inc.", "TSLA | Tesla, Inc.", "GOOG | Alphabet Inc.");
@@ -99,6 +103,8 @@ public class TradeController {
                 e.printStackTrace();
             }
         });
+
+        back.setOnAction(event -> new SceneController(anchorPane).activate("Home"));
     }
 
     private Stock getStock() {
